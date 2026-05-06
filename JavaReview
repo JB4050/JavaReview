@@ -1,0 +1,2075 @@
+// All content covered in this part of the course
+/*
+public class AllContent {
+  
+
+  public class AppleStore {
+    public static void main(String[] args) {
+        int numOfApples = 0;
+        int numOfCustomers = 0;
+        double profit = 0;
+
+        // Instructions for this workbook are on Learn the Part (see the Udemy Video: Workbook 2.3 to access the link).
+
+        System.out.println("You picked 500 apples from an apple orchard");
+        numOfApples += 500;
+        
+        System.out.println("Time for business! You're selling each apple for 40 cents");
+
+        System.out.println("One customer walked in. He bought 4 apples!");
+        profit += (4 * 0.4);
+        numOfApples -= 4;
+        numOfCustomers ++;
+
+        System.out.println("Another customer walked in. He bought 20 apples!");
+        profit += (20 * 0.4);
+        numOfApples -= 20;
+        numOfCustomers ++;
+
+        System.out.println("Another customer walked in. She bought 200 apples!");
+        profit += (200 * 0.4);
+        numOfApples -= 200;
+        numOfCustomers ++;
+
+
+        System.out.println("Wow! So far, you made: $" + profit);
+        System.out.println(numOfCustomers + " customers love your apples.");
+        System.out.println("You have " + numOfApples + " apples left.");
+
+        // Compare your result to what's on Learn the Part.  
+        
+    }
+
+}
+
+  */
+
+
+  /*
+  public class Bus {
+  public static void main(String[] args) {
+    int passengers = 0;
+    passengers += 9;
+    System.out.println("There are " + passengers + " on the bus!");
+    passengers -= 5;
+    System.out.println("5 people got off, so there are " + passengers + " left!"); 
+  }
+}
+
+  */
+
+
+  /*
+  //import Scanner
+
+import java.util.Scanner;
+
+public class Chatbot {
+    public static void main(String[] args) {
+        
+        //See Learn the Part for the complete instructions. 
+
+        
+        //set up scanner. 
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Hello. What is your name?");
+        //Pick up user's name and store it. 
+        String name = scanner.nextLine();
+
+                           
+        //add new a line before asking next question. 
+        System.out.println("Hi " + name + "! I'm Javabot. Where are you from?");
+        //Pick up user's home and store it. 
+        String home = scanner.nextLine();
+
+        //add new a line before asking next question.
+        System.out.println("I hear it's beautiful at " + home + "! I'm from a place called Oracle");
+        System.out.println("How old are you?");
+        //Pick up age and store it.
+        int age = scanner.nextInt();
+
+        //add new a line before asking next question.
+        System.out.println("So you're " + age + ", cool! I'm 400 years old.");
+        System.out.println("This means I'm " + (400 / age) +" times older than you.");
+        System.out.println("Enough about me. What's your favourite language? (just don't say Python)");
+        //Pick up language and store it. 
+        scanner.nextLine();
+        String language = scanner.nextLine();
+
+
+        //add new a line here.
+        System.out.println(language + ", that's great! Nice chatting with you " + name + ". I have to log off now. See ya!");
+        
+        //close scanner. 
+        scanner.close();
+        
+    }
+}
+  
+  */
+
+
+  /*
+  public class Debugging {
+
+    public static void main(String[] args) {
+
+        double exam1Score = 85;
+        double exam2Score = 90;
+        double exam3Score = 95;
+
+        int total = 100;
+
+        double decimalScore1 = exam1Score / total; 
+        double decimalScore2 = exam2Score / total; 
+        double decimalScore3 = exam3Score / total; 
+
+        double decimalAverage = (decimalScore1 + decimalScore2 + decimalScore3) / 3.0;
+
+        System.out.println("The decimal average is: " + decimalAverage);
+
+    }
+
+  */
+
+
+    /*
+    public class Decimals {
+  public static void main(String[] args) {
+    
+    // Double has 8 bytes/64 bits. It can reach 15 decimal places
+    double percentage = 72.4;
+    System.out.println(percentage + " of all percentages are made-up");
+
+    // If there are two ints- answer will be wrong
+    // If one of the values in double- answer will be double
+
+    double wallet = 20;
+    int people = 3;
+    System.out.println("Each person will get " + wallet / people + " dollars");
+
+  }
+}
+
+    */
+
+/*
+public class Grades {
+  public static void main(String[] args) {
+
+    // Only one character- always 2 bytes
+
+    char potions = 'A';
+    char arithmancy = 'C';
+    char charms = 'B';
+    
+
+    System.out.println("Potions Grade: " + potions);
+    System.out.println("Arithmancy Grade: " + arithmancy);
+    System.out.println("Charms Grade: " + charms);
+
+  }
+}
+
+*/
+
+/*
+public class MathOperations {
+    public static void main(String[] args) {
+
+        int bagOfSweets1 = 5;
+        int bagOfSweets2 = 10;
+
+        long starsInMilkyWay = 250_000_000_000L; //250 billion
+        long starsInAndromeda = 1_000_000_000_000L; // 1 trillion
+
+        double testScore = 6.7;
+
+        System.out.println("Fred and George collected " + (bagOfSweets1 + bagOfSweets2) + "sweets");
+        System.out.println("There are " + (starsInAndromeda + starsInMilkyWay) + " stars in the Milky Way and Andromeda galaxies.");
+
+        System.out.println("Fred has " + (bagOfSweets2 - bagOfSweets1) + " more sweets than George");
+        System.out.println("The Andromeda Galaxy has " + (starsInAndromeda - starsInMilkyWay) + " more stars than the Milky Way");
+
+        System.out.println("Snape made an error on his excel, accidentally multiplying Ron's score to: " + testScore * 1.25);
+        System.out.println("Snape caught the error. Furious, he divided Ron's score to: " + testScore / 2);
+        
+        System.out.println("10 is an even number, since dividing 10 by 2 has a remainder of: " + (10 % 2));
+        System.out.println("5 is an odd number, since dividing 5 by 2 has a remainder of: " + (5 % 2));
+
+        int counter = 0;
+        System.out.println(counter);
+        System.out.println(counter);
+    }
+}
+*/
+
+/*
+public class Meeting {
+    public static void main(String[] args) {
+        
+        // Instructions for this workbook are on Learn the Part (see the Udemy Video: Workbook 2.4 to access the link).
+
+        double sales = 24309.65; 
+        double profit = 18562.18; 
+        double refunds = 688.78; 
+        double shipping = 1233.57; 
+
+        System.out.println("This month, we made $" + (int)sales + " in sales");
+        System.out.println("Factoring in costs, we made $" + (int)profit + " in profit");
+        System.out.println("The refunds are at a low $" + (int)refunds + ". This is a good sign!");
+        System.out.println("Shipping costs were high. We paid $" + (int)shipping + " in shipping");
+
+    }
+}
+
+*/
+
+/*
+import java.util.Scanner;
+
+public class NextLineTrap {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Next line trap occurs when nextLine() is skipped when it comes after nextInt(), nextDouble(), nextLong(), next()
+        // Solution- create a throwaway nextLine() BEFORE the real one
+
+        // nextInt() example
+        System.out.print("\nEnter your age, your friend's age, and your parent's age: "); // next.Int() skips whitespace and collects the next integer
+        int yourAge = scanner.nextInt();
+        int friendAge = scanner.nextInt();
+        int parentAge = scanner.nextInt();
+
+        System.out.println("Ages: You - " + yourAge +", Friend - " +friendAge +", Parent - " + parentAge);
+
+        System.out.print("\nEnter a greeting: ");
+        scanner.nextLine(); // Throwaway nextLine() that takes the empty space 
+        String greeting = scanner.nextLine(); // Gets skipped when after another next. type call
+
+        System.out.println("Greeting: " + greeting);
+
+        // nextDouble() example
+        System.out.print("\nEnter the price of a book, a coffee, and a meal: ");
+        double bookPrice = scanner.nextDouble();
+        double coffeePrice = scanner.nextDouble();
+        double mealPrice = scanner.nextDouble();
+
+        System.out.println("Prices: Book - " + bookPrice + ", Coffee - " + coffeePrice + ", Meal - " + mealPrice);
+
+        System.out.print("\nEnter a restaurant name: ");
+        scanner.nextLine(); // Throwaway nextLine() that takes the empty space 
+        String restaurant = scanner.nextLine();
+
+        System.out.println("Restaurant: " + restaurant);
+
+        // nextLong() example
+        System.out.print("\nEnter the population of three cities: ");
+        long city1Population = scanner.nextLong();
+        long city2Population = scanner.nextLong();
+        long city3Population = scanner.nextLong();
+
+
+        System.out.println("Populations: City 1 - " + city1Population + ", City 2 - " + city2Population + ", City 3 - " + city3Population + "\n");
+
+        System.out.print("\nEnter the name of the most populous city: ");
+        scanner.nextLine(); // Throwaway nextLine() that takes the empty space 
+        String cityName = scanner.nextLine();
+
+        System.out.println("Most populous city: " + cityName);
+
+        // next() example
+        System.out.print("\nEnter three colors: ");
+        String color1 = scanner.next();
+        String color2 = scanner.next();
+        String color3 = scanner.next();
+
+
+        System.out.println("Colors: 1 - " + color1 + ", 2 - " + color2 + ", 3 - " + color3 +"\n");
+
+        System.out.print("\nEnter your favorite color combination: ");
+        scanner.nextLine();
+        String colorCombination = scanner.nextLine();
+        System.out.println("Favorite color combination: " + colorCombination);
+
+        scanner.close();
+    }
+}
+
+*/
+
+/*
+import java.util.Scanner;
+
+public class SignUp {
+
+    public static void main(String[] args) {
+        
+        // Instructions for this workbook are on Learn the Part (see the Udemy Video: Workbook 2.5 to access the link).
+
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("Welcome to JavaGram! Let's sign you up.");
+        
+        System.out.println("What is your first name?");
+        String firstName = scan.nextLine();
+
+        System.out.println("What is your last name?");
+        String lastName = scan.nextLine();
+
+        System.out.println("How old are you?");
+        int age = scan.nextInt();
+
+        System.out.println("Make a username");  
+        scan.nextLine();
+        String username = scan.nextLine();
+        // If you experience trouble picking up the username, please carefully read the instructions on Learn the Part.
+        
+        System.out.println("What city do you live in?");
+        String city = scan.nextLine();
+
+        System.out.println("What country is that?");
+        String country = scan.nextLine();
+        
+        System.out.println("Thank you for joining JavaGram!");
+        System.out.println("\nHere is the information you entered:");
+        System.out.println("\tFirst Name: " + firstName);
+        System.out.println("\tLast Name: " + lastName);
+        System.out.println("\tAge: " + age);
+        System.out.println("\tUsername: " + username);
+        System.out.println("\tCity: " + city);
+        System.out.println("\tCountry: " + country);
+
+        scan.close();
+        //close scanner. It's good practice :D ! 
+    }
+}
+
+}
+*/
+
+/*
+public class AllContent3 {
+  
+}
+public class BooleanComparisons {
+    public static void main(String[] args) {
+        
+        int chemistryGrade = 95;
+        int biologyGrade = 75;
+        System.out.println("Me: Hi Java, did I score better in biology?");
+        if(biologyGrade > chemistryGrade) {
+            System.out.println("Yup, you did better in Biology!");
+        } else {
+            System.out.println("Nope, you were worse in Biology...");
+        }
+
+        System.out.println("Java: " + (biologyGrade > chemistryGrade) + "\n");
+        
+        double sales = 37.55;
+        double costs = 5.55;
+        System.out.println("Me: Hi Java, did we make money?");
+        System.out.println("Java: " + (sales > costs) + "\n");
+
+        double temperature = 15.5;
+        double targetTemperature = 20.0;
+        System.out.println("Me: Hi Java, is the temperature colder than our target?");
+        System.out.println("Java: " + (temperature < targetTemperature) + "\n");
+
+        int currentSpeed = 60;
+        int speedLimit = 70;
+        System.out.println("Me: Hi Java, am I driving slower than the speed limit?");
+        System.out.println("Java: " + (currentSpeed < speedLimit) + "\n");
+
+        int age = 45;
+        int retirementAge = 65;
+        System.out.println("Me: Hi Java, am I old enough to retire?");
+        System.out.println("Java: " + (age >= retirementAge) + "\n");
+
+        double salary = 50000.0;
+        double maxSalary = 60000.0;
+        System.out.println("Me: Hi Java, is my salary less than or equal to the maximum salary?");
+        System.out.println("Java: " + (salary <= maxSalary) + "\n");
+
+        char myGrade = 'A';
+        char bestGrade = 'A';
+        System.out.println("Me: Hi Java, did I get the best possible grade?");
+        System.out.println("Java: " + (myGrade == bestGrade) + "\n");
+        
+        int phoneNumber = 5551234;
+        int contactNumber = 5551234;
+        System.out.println("Me: Hi Java, is this the correct phone number for my contact?");
+        System.out.println("Java: " + (phoneNumber == contactNumber) + "\n");
+        
+        char letter1 = 'a';
+        char letter2 = 'b';
+        System.out.println("Me: Hi Java, are these two letters different?");
+        System.out.println("Java: " + (letter1 == letter2) + "\n");
+        
+        long distance1 = 1000L;
+        long distance2 = 500L;
+        System.out.println("Me: Hi Java, are these two distances not equal?");
+        System.out.println("Java: " + (distance1 != distance2) + "\n");
+
+// For string comparison, must use .equals NOT == !=
+
+        String word = "hello";
+        String secondWord = "hello";
+
+        System.out.println("Me: Are the two words the same?");
+        System.out.println("Java: " + (word.equals(secondWord)) + "\n");
+
+
+        String thirdWord = "hello";
+        String fourthWord = "goodbye";
+
+        System.out.println("Me: Are the two words different");
+        System.out.println("Java: " + (!thirdWord.equals(fourthWord)) + "\n");
+
+
+    }
+}
+*/
+
+/*
+public class Championship {
+    public static void main(String[] args) {
+
+        //See Learn the Part for the complete instructions (link in resources folder of Udemy video).  
+
+        int gryffindor = 500;    //gryffindor points
+        int ravenclaw = 200;    //ravenclaw points
+        int margin = gryffindor - ravenclaw;
+        // int margin = amount of points by which gryffindor scored over ravenclaw;
+        if(margin >= 300) {
+            System.out.println("Gryffindor win the quiddich cup!");
+        } else if (margin >= 0 && margin < 300) {
+            System.out.println("Griffindor take second place!");
+        } else if (margin < 0 && margin >= -100) {
+            System.out.println("Griffindor come third in the cup!");
+        } else {
+            System.out.println("And Griffindor are an embarrassing last...");
+        }
+    }
+}
+
+*/
+
+
+/*public class IfElse {
+
+    public static void main(String[] args) {
+
+        int chemistryGrade = 95;
+        int biologyGrade = 75;
+        System.out.println("Me: Hi Java, did I score better in biology?");
+        // Add if-else statement here
+         if(biologyGrade > chemistryGrade) {
+            System.out.println("Yup, you did better in Biology!");
+        } else {
+            System.out.println("Nope, you were worse in Biology...");
+        }
+
+        double sales = 37.55;
+        double costs = 5.55;
+        System.out.println("Me: Hi Java, did we make money?");
+        // Add if-else statement here
+         if(sales > costs) {
+            System.out.println("Yup, you made money, woohoo!");
+        } else {
+            System.out.println("No, we're poor now...");
+        }
+
+        double temperature = 15.5;
+        double targetTemperature = 20.0;
+        System.out.println("Me: Hi Java, is the temperature colder than our target?");
+        // Add if-else statement here
+         if(temperature < targetTemperature) {
+            System.out.println("Yes, it's chilly!");
+        } else {
+            System.out.println("Nope, it's pretty warm");
+        }
+
+        int currentSpeed = 60;
+        int speedLimit = 70;
+        System.out.println("Me: Hi Java, am I driving slower than the speed limit?");
+        // Add if-else statement here
+         if(currentSpeed < speedLimit) {
+            System.out.println("Yeah, you're fine!");
+        } else {
+            System.out.println("Nope, you might wanna slow down...");
+        }
+
+        int age = 45;
+        int retirementAge = 65;
+        System.out.println("Me: Hi Java, am I old enough to retire?");
+        // Add if-else statement here
+         if(age >= retirementAge) {
+            System.out.println("Yes, you old bugger!");
+        } else {
+            System.out.println("Nope, you have to keep working for " + (retirementAge - age) + " years!");
+        }
+
+        char myGrade = 'A';
+        char bestGrade = 'A';
+        System.out.println("Me: Hi Java, did I get the best possible grade?");
+        // Add if-else statement here
+         if(myGrade == bestGrade) {
+            System.out.println("Yes, I'm happy for you");
+        } else {
+            System.out.println("No, you loser");
+        }
+
+        String word = "hello";
+        String secondWord = "hello";
+        System.out.println("Me: Are the two words the same?");
+        // Add if-else statement here
+        if(word.equals(secondWord)) {
+            System.out.println("Of course, can you read?");
+        } else {
+            System.out.println("Of course not, can you read?");
+        }
+
+        String thirdWord = "hello";
+        String fourthWord = "goodbye";
+        System.out.println("Me: Are the two words different");
+        // Add if-else statement here
+        if(!thirdWord.equals(fourthWord)) {
+            System.out.println("Of course they're different...");
+        } else {
+            System.out.println("Why would you ask such a daft question?");
+        }
+    }
+}
+*/
+
+
+/*public class IfElseIfElse {
+    public static void main(String[] args) {
+
+        String weather = "rainy";
+        if(weather.equals("sunny")) {
+            System.out.println("It's a nice day for a walk.");
+        } else if (weather.equals("rainy")){
+            System.out.println("Bring an umbrella!");
+        } else {
+            System.out.println("Not sure what to do in this weather.");
+        }
+
+        int score = 85;
+        if(score >= 85) {
+            System.out.println("You got an A!");
+        } else if(score >= 70) {
+            System.out.println("You got a B!");
+        } else if(score >= 60) {
+            System.out.println("You got a C!");
+        } else if(score >= 50) {
+            System.out.println("You got a D!");
+        } else {
+            System.out.println("You failed :(");
+        }
+       
+        String jobTitle = "manager";
+        if(jobTitle.equals("CEO")) {
+            System.out.println("You're the boss!");
+        } else if(jobTitle.equals("manager")) {
+            System.out.println("You're in charge of a team.");
+        } else {
+            System.out.println("You're an employee.");
+        }
+
+
+        char grade = 'B';
+        if(grade == 'A') {
+            System.out.println("Excellent work!");
+
+        } else if(grade == 'B') {
+            System.out.println("Good job!");
+        } else if(grade == 'C') {
+            System.out.println("You did OK.");
+        } else if(grade == 'D') {
+            System.out.println("Hey, you still passed!");
+
+        } else {
+            System.out.println("You failed :(");
+        }
+
+        // C: System.out.println("You did okay.");
+        // D: System.out.println("Hey, you still passed!");
+        
+    }
+}
+*/
+
+
+/* 
+public class JavaMart {
+    public static void main(String[] args) {
+        double wallet = 100;
+
+        //See Learn the Part for the complete instructions (link in resources folder of Udemy video).  
+
+ 
+        double toyCar = 5.99;
+        System.out.println("Can I get this car?");
+        if((wallet - toyCar) >= 0) {
+            System.out.println("Sure!");
+            wallet -= toyCar;
+        } else {
+            System.out.println("I don't have enough money, sorry...");
+        }
+        //if you have enough money
+            //       print: Sure!
+            //       pay for the toy car 
+
+        //else:  Sorry, I only have <wallet> left.
+
+        
+        double nike = 95.99;
+        System.out.println("Can I get these nike shoes?");
+        if((wallet - nike) >= 0) {
+            System.out.println("Sure, I'll get them for you!");
+            wallet -= nike;
+        } else {
+            System.out.println("I'm afraid I only have " + wallet + " left. Those are " + nike);
+        }
+        //if you have enough money
+            //       print: Sure!
+            //       pay for the nike shoes 
+
+        //else: Sorry, I only have <wallet> left.
+
+    }
+}
+*/
+
+
+/*
+public class WeatherNetwork {
+    public static void main(String[] args) {
+
+        //See Learn the Part for the complete instructions (link in resources folder of Udemy video).  
+
+        
+        int temp = 5;  
+
+        String forecast = "";
+
+        //IF - ELSE IF - ELSE STATEMENTS HERE!
+        if(temp <= -1) {
+            forecast = "The forecast is FREEZING! Stay home!";
+        } else if (temp <= 10) {
+            forecast = "The forecast is chilly, wear a coat!";
+        } else {
+            forecast = "It's warm, go outside!";
+        }
+        
+        
+        System.out.println(forecast);
+    }
+}
+*/
+
+
+/*
+public class WorkSchedule {
+    public static void main(String[] args) {
+        
+        //See Learn the Part for the complete instructions (link in resources folder of Udemy video).  
+
+        int day = 6;   //3rd day of the week...
+        boolean holiday = false;
+         
+        // IF - ELSE IF - ELSE HERE!
+        if(holiday) {
+            System.out.println("Woohoo, no work!");
+        } else if(day == 6 || day == 7) {
+            System.out.println("It's the weekend, no work!");
+        } else {
+            System.out.println("Wake up at 6:00...");
+        }
+        
+        }
+
+    }
+*/
+
+
+/*
+public class SwitchStatements {
+    public static void main(String[] args) {
+
+        // Section 1: Weather conditions
+        String weather = "sunny";
+        // Determine what to wear based on the weather (e.g., sunny, cloudy, rainy, snowy)
+        // Decide whether to use if-else or switch
+        switch (weather) {
+            case "sunny":
+                System.out.println("Nice weather!");
+                break;
+                case "cloudy":
+                System.out.println("Maybe wear a jumper!");
+                break;
+                case "rainy":
+                System.out.println("Don't forget your unbrella!");                
+                break;
+                case "snowy":
+                System.out.println("You'll need a jacket today!");                
+                break;
+            default:
+                System.out.println("Do whatever you like!");
+                break;
+        }
+
+        // Section 2: User role
+        int role = 2;
+        // Determine user access level based on the role (e.g., 1: admin, 2: editor, 3: user)
+        // Decide whether to use if-else or switch
+        switch (role) {
+            case 1:
+                System.out.println("You are an admin");
+                break;
+            case 2:
+                System.out.println("You are an editor");
+                break;
+            case 3:
+                System.out.println("You are an user");
+                break;
+            default:
+                System.out.println("Talk to your manager");
+                break;
+        }
+
+        // Section 3: Temperature and humidity
+        int temperature = 75;
+        int humidity = 65;
+        // Determine the comfort level based on both temperature and humidity (e.g., too hot, too cold, comfortable)
+        // Decide whether to use if-else or switch
+        if(temperature >= 80 && humidity >= 60) {
+            System.out.println("It's super uncomfortable");
+        } else if (temperature >= 80) {
+            System.out.println("It's hot, but dry");
+        } else {
+            System.out.println("The temperature is decent and it's not too humid!");
+        }
+
+        // Section 5: Age and income
+        int age = 25;
+        int income = 50000;
+        // Determine eligibility for a specific credit card based on age and income
+        // Decide whether to use if-else or switch
+        if(age >= 30 && income >= 50000) {
+            System.out.println("Sure, have a loan");
+        } else if ( age >= 20 && income >= 30000) {
+            System.out.println("We might be able to get you a loan...");
+        } else {
+            System.out.println("No chance, buddy!");
+        }
+
+        // Section 1: Traffic light colors
+        String lightColor = "green";
+        // Determine what action to take based on the traffic light color (e.g., green, yellow, red)
+        // Decide whether to use if-else or switch
+        switch (lightColor) {
+            case "green":
+                System.out.println("Rev that engine matey!");
+                break;
+            case "yellow":
+                System.out.println("Ready your marks!");
+                break;
+            case "red":
+                System.out.println("You'd better not run that light!");
+                break;    
+            default:
+                break;
+        }
+
+        // Section 2: Exam grade
+        int grade = 85;
+        // Determine the letter grade based on the numeric grade (e.g., A, B, C, D, F)
+        // Decide whether to use if-else or switch
+        if(grade >= 80) {
+            System.out.println("You got an A");
+        } else if (grade >= 70) {
+            System.out.println("You got a B");
+        } else {
+            System.out.println("I can't be bothered to write any more of these conditions");
+        }
+
+        // Section 3: Browser type
+        String browser = "Chrome";
+        // Check if the browser is one of the following: Chrome, Firefox, Safari, Edge, or Opera
+        // Decide whether to use if-else or switch
+        switch (browser) {
+            case "Chrome":
+                System.out.println("You're using chrome");
+                break;
+                case "Firefox":
+                System.out.println("You're using firefox");
+                break;
+                case "Safari":
+                System.out.println("You're using safari");
+                break;
+        
+            default:
+              System.out.print("You're using a rubbish browser")
+                break;
+        }
+        
+
+    }
+}
+*/
+
+/*
+public class Calendar {
+    public static void main(String[] args) {
+        
+        //See Learn the Part for the complete instructions (link in resources folder of Udemy video).  
+
+        String day = "a"; //Can be any day.
+        System.out.println("Hey, are you free on " + day + "? \n");
+
+
+        System.out.println("Hmm, let me check my calendar.");
+        
+        //Check 'calendar' here:        
+        switch (day) {
+            case "Monday":
+                System.out.println("Sorry, I have to do overtime today");
+                break;
+                case "Tuesday":
+                System.out.println("Sorry, I have meetings all day");
+                break;
+                case "Wednesday":
+                System.out.println("Sorry, I have a dentist appointment");
+                break;
+                case "Thursday":
+                System.out.println("Sorry, I have a date");
+                break;
+                case "Friday":
+                System.out.println("I think I'm free...");
+                break;
+                case "Saturday":
+                System.out.println("I think I'm free...");
+                break;
+                case "Sunday":
+                System.out.println("I definitely have church, I'm very religious");
+                break;
+        
+            default:
+                System.out.println("That isn't a day...");
+                break;
+        }
+        
+
+    }
+}
+
+*/
+
+/*
+import java.util.Scanner;
+
+public class Bank {
+    public static void main(String[] args) {
+        
+        //See Learn the Part for the complete instructions (link in resources folder of Udemy video).  
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("\n****ROYAL BANK OF JAVA****");
+        System.out.println("Are you here to get a mortgage? (yes or no)");
+        //Task 1 - Pick up the user's decision.
+        String decision = scan.nextLine();
+
+
+        //Task 2 - Print this if the decision is "yes"
+        if(decision.equals("yes")) {
+            System.out.println("\nGreat! In one line" +
+                "\nHow much money do you have in your savings?" +
+                "\nAnd, how much do you owe in credit card debt?");
+                // Task 3 - Pick up each value 
+                int savings = scan.nextInt();
+                int debt = scan.nextInt();
+                System.out.println("\nHow many years have you worked for?");
+                   // Task 4 - Pick up number of years
+                int workYears = scan.nextInt();
+                System.out.println("What is your name?");
+                   // Task 5 - Pick up the user's name
+                scan.nextLine();
+                String name = scan.nextLine();
+                    if(savings >= 10000 && debt <= 5000 && workYears >= 2) {
+                        System.out.println("Congratulations " + name + ", You have been approved!");
+                    } else {
+                        System.out.println("Sorry, you are not eligible for a mortgage.");
+                    }
+                   //Task 6 - Approve the mortgage if they meet the requirements (see article)
+                   //       - Otherwise, don't give them a mortgage.          
+
+        } else {
+            //Task 2 - Print this if the decision was not "yes"
+            System.out.println("\nOK. Have a nice day!");
+        }
+
+
+
+        scan.close();
+    }
+}
+*/
+
+/*
+import java.util.Scanner;
+
+public class Quiz {
+    public static void main(String[] args) {
+        
+        //See Learn the Part for the complete instructions.
+
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("1. Which country held the 2016 Summer Olympics?");
+        System.out.println("\ta) China\n\tb) Ireland\n\tc) Brazil\n\td) Italy\n");
+        //store answer 1
+        int score = 0;
+        String ans1 = scan.nextLine(); 
+        switch (ans1) {
+            case "China":
+                System.out.println("Incorrect");
+                break;
+            case "Ireland":
+                System.out.println("Incorrect");
+                break;
+            case "Brazil":
+                System.out.println("Correct!");
+                score += 5;
+                break;
+            case "Italy":
+                System.out.println("Incorrect");
+                break;
+            default:
+                System.out.println("Incorrect, please input the answer more carefully next time");
+                break;
+        }
+
+        System.out.println("\n2. Which planet is the hottest?");
+        System.out.println("\ta) Venus\n\tb) Saturn\n\tc) Mercury\n\td) Mars\n");
+        //store answer 2
+         String ans2 = scan.nextLine(); 
+        switch (ans2) {
+            case "Venus":
+                System.out.println("Correct!");
+                score += 5;
+                break;
+            case "Saturn":
+                System.out.println("Incorrect");
+                break;
+            case "Mercury":
+                System.out.println("Incorrect");
+                break;
+            case "Mars":
+                System.out.println("Incorrect");
+                break;
+            default:
+                System.out.println("Incorrect, please input the answer more carefully next time");
+                break;
+        }
+
+        System.out.println("\n3. What is the rarest blood type?");
+        System.out.println("\ta) O\n\tb) A\n\tc) B\n\td) AB-Negative\n");
+        //store answer 3
+        String ans3 = scan.nextLine(); 
+        switch (ans3) {
+            case "O":
+                 System.out.println("Incorrect");
+                break;
+            case "A":
+                System.out.println("Incorrect");
+                break;
+            case "B":
+                System.out.println("Incorrect");
+                break;
+            case "AB-Negative":
+                System.out.println("Correct!");
+                score += 5;
+                break;
+            default:
+                System.out.println("Incorrect, please input the answer more carefully next time");
+                break;
+        }
+
+        System.out.println("\n4. Which one of these characters is friends with Harry Potter?");
+        System.out.println("\ta) Ron Weasley\n\tb) Hermione Granger\n\tc) Draco Malfoy\n\td) Neville Longbottom");
+        //store answer 4
+        String ans4 = scan.nextLine(); 
+        switch (ans4) {
+            case "Ron Weasley":
+                 System.out.println("Correct!");
+                score += 5;
+                break;
+            case "Hermione Granger":
+                System.out.println("Correct!");
+                score += 5;
+                break;
+            case "Draco Malfoy":
+                System.out.println("Incorrect");
+                break;
+            case "Neville Longbottom":
+                System.out.println("Incorrect, sorry Neville");
+                break;
+            default:
+                System.out.println("Incorrect, please input the answer more carefully next time");
+                break;
+        }
+         
+
+
+        //Task 2: Check each answer - For each correct answer, add 5 points to the score. 
+        
+        System.out.println("Your final score is: " + score + "/20");
+
+        //Task 3: print a message depending on the score
+
+        // if the score is 15 or higher, print: "Wow, you know your stuff!";
+        // if the score is between 5 and 15, print "Not bad!";
+        // else, better luck next time. 
+        if (score >= 15) {
+            System.out.println("You know your stuff!");
+        } else if (score >= 5) {
+            System.out.println("Not too bad");
+        } else {
+            System.out.println("Better luck next time");
+        }
+
+
+        scan.close();
+
+    }
+}
+
+*/
+
+// METHODS/FUNCTIONS- blocks of reusable code that performs a task and can be called when needed for greater repeatability and ease-of-use
+// Methods are called from MAIN
+
+/*
+PARAMETERS:
+*/
+
+
+/*
+public class Chorus {
+    public static void main(String[] args) {
+        // Chorus needs to be sung 5 times
+        singChorus();
+        singChorus();
+        singChorus();
+        singChorus();
+        singChorus();
+
+
+    }
+
+    public static void singChorus() {
+        System.out.println("Don't blame it on the sunshine");
+        System.out.println("Don't blame it on the moonlight");
+        System.out.println("Don't blame it on good times");
+        System.out.println("Don't blame it on the boogie\n");
+    }
+
+}
+*/
+
+
+/*
+public class Detention {
+    public static void main(String[] args) {
+
+        //what Bart did so far
+        
+        // Task 2 – call the function 6 times. 
+        printLines();
+        printLines();
+        printLines();
+        printLines();
+        printLines();
+        printLines();
+    }
+    
+    
+    public static void printLines() {
+        System.out.println("I will not copy and paste code.");
+        System.out.println("I will use Camel Case when writing class names.");
+        System.out.println("I will use lower Camel Case when writing function names.");
+        System.out.println("I will use lower Camel Case when writing variables names.\n");
+    }
+
+    //Task 1 - Make a function here. See the doc comment for details. 
+
+    /**    
+      * Funtion name: printLines
+      *
+      * Inside the function:
+      *   1. prints the four lines       
+      */
+
+
+
+
+
+
+/*
+public class parameters {
+  
+  public static void main(String[] args) {
+    
+    calculateArea(2.4, 4.2);
+    calculateArea(6.7, 1.2);
+    calculateArea(11.3, 6.2);
+  }
+  
+  public static void calculateArea(double length, double width) {
+    double area = length * width;
+    System.out.println("Area :" + area) ;
+
+    // Can only call if both are STATIC
+  }
+
+}
+*/
+
+
+/*
+public class Tip {
+
+    public static void main(String[] args) {
+        double bill = 53.5;
+        System.out.println("Waiter: I hope you enjoyed your meal!");
+        System.out.println("Thank you!");
+    
+        //Task 2: Call a function that tips the waiter.
+        tipTheWaiter(34.60);
+        tipTheWaiter(12.40);
+        tipTheWaiter(76.45);
+
+    }
+
+
+
+    
+    //Task 1: Make a function here. See the doc comment for details.  
+    public static void tipTheWaiter(double bill) {
+        double tip = bill * 0.15;
+        System.out.println("Your service was wonderful, please accept this tip: $" + tip);
+    }
+
+    /**
+     * Function name: tipTheWaiter - calculates a tip and prints it.
+     * @param bill (double).
+     * 
+     * Inside the function:
+     *  1. Calculates a tip that's 15 percent of bill.
+     *  2. Prints: Your service was wonderful! Please, accept this tip: $<tip>
+     */
+
+
+
+/*
+public class ReturnValues {
+  
+ public static void main(String[] args) {
+    
+    double area1 = calculateArea(2.4, 4.2);
+    double area2 = calculateArea(6.7, 1.2);
+    double area3 = calculateArea(11.3, 6.2);
+    
+    String englishExplanation = explainArea("English");
+    String frenchExplanation = explainArea("French");
+    String spanishExplanation = explainArea("Spanish");
+    String italianExplanation = explainArea("Italian");
+  }
+  
+  public static double calculateArea(double length, double width) {
+    if (length < 0 || width < 0) {
+      System.out.println("Invalid dimensions");
+      System.exit(0);
+    }
+    double area = length * width;
+    return area;
+    // Functions should NOT handle the final result-just return it
+    // System.out.println("Area :" + area) ;
+    
+  }
+
+  public static String explainArea(String language) {
+    
+    switch (language) {
+      case "English": return "Area equals length * width";
+      case "French": return "La surface est egale a la longueur * la largeur";
+      case "Spanish": return "area es igual a largo * ancho";
+      default: return "That isn't a recognised language";
+    } // NO BREAK- return will stop the code by itself so no break is needed
+  }
+  
+}
+*/
+
+/* Method for calculating metres from feet- OOP style
+public class CalcMetres {
+  public static void main(String[] args) {
+    CalcMetres calc = new CalcMetres();
+    calc.printMeasurement(10);
+    calc.printMeasurement(33);
+  }
+
+    public void printMeasurement(double feet) {
+      double metres = feetToMetres(feet);
+      System.out.println("Feet: " + feet);
+      System.out.println("Metres: " + metres);
+    }
+
+    public double feetToMetres(double feet) {
+      return feet * 0.3048;
+    }
+
+}
+*/
+
+/* Fahrenheit to celcius calculator
+public class Weather {
+    public static void main(String[] args) {
+        double noon = 77;          
+        double evening = 61;      
+        double midnight = 55;     
+
+        double celciusNoon = fahrenheitToCelsius(noon);
+        System.out.println(celciusNoon);
+        
+        double celciusEve = printTemperatures(evening);
+        System.out.println(celciusEve);
+
+        double celciusMid = printTemperatures(midnight);
+        System.out.println(celciusMid);
+    }
+
+
+  
+    public static double fahrenheitToCelsius(double fahrenheit) {
+        double celcius = (fahrenheit - 32) * (5.0 / 9.0);
+        return celcius;
+    }
+   
+    public static double printTemperatures(double fahrenheit) {
+        System.out.println("Fahrenheit: " + fahrenheit);
+        double celcius = fahrenheitToCelsius(fahrenheit);
+        System.out.println("Celcius: " + celcius);
+        return celcius;
+    }
+   
+}
+*/
+
+/* Draw an animal 
+import java.util.Scanner;
+
+public class JavaDraw {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        int choice;
+
+	System.out.print( "\nWhich animal would you like to draw?\n" );
+        System.out.println( "Write 1 for butterfly " );
+	System.out.println( "Write 2 for elephant  " );
+	System.out.println( "Write 3 for bear      " );
+        System.out.println( "Write 4 for snake     " );
+
+        //Task 1 – Pick up the user's choice.
+        int choice1 = scan.nextInt();
+
+        //Task 3 – Call the draw function, and pass in the user's choice.
+        draw(choice1);
+        scan.close();
+    }
+
+
+       //Task 2 – Write a function 
+
+       public static void draw(int choice) {
+        switch (choice) {
+                case 1:
+            System.out.println("  .==-.                   .-==.     ");
+            System.out.println("   \\()8`-._  `.   .'  _.-'8()/     ");
+            System.out.println("   (88\"   ::.  \\./  .::   \"88)     ");
+            System.out.println("    \\_.'`-::::.(#).::::-'`._/      ");
+            System.out.println("      `._... .q(_)p. ..._.'         ");
+            System.out.println("        \"\"-..-'|=|`-..-\"\"       ");
+            System.out.println("        .\"\"' .'|=|`. `\"\".       ");
+            System.out.println("      ,':8(o)./|=|\\.(o)8:`.        ");
+            System.out.println("     (O :8 ::/ \\_/ \\:: 8: O)      ");
+            System.out.println("      \\O `::/       \\::' O/       ");
+            System.out.println("       \"\"--'         `--\"\"      ");
+                        break;
+                        case 2:
+            System.out.println("       _..--\"\"-.                  .-\"\"--.._ ");
+            System.out.println("   _.-'         \\ __...----...__ /         '-._");
+            System.out.println(" .'      .:::...,'              ',...:::.      '.");
+            System.out.println("(     .'``'''::;                  ;::'''``'.     )");
+            System.out.println(" \\             '-)              (-'             /");
+            System.out.println("  \\             /                \\             /");
+            System.out.println("   \\          .'.-.            .-.'.          /");
+            System.out.println("    \\         | \\0|            |0/ |         /");
+            System.out.println("    |          \\  |   .-==-.   |  /          |");
+            System.out.println("     \\          `/`;          ;`\\`          /");
+            System.out.println("      '.._      (_ |  .-==-.  | _)      _..'");
+            System.out.println("          `\"`\"-`/ `/'        '\\` \\`-\"`\"`");
+            System.out.println("               / /`;   .==.   ;`\\ \\");
+            System.out.println("         .---./_/   \\  .==.  /   \\ \\");
+            System.out.println("        / '.    `-.__)       |    `\"");
+            System.out.println("       | =(`-.        '==.   ;");
+            System.out.println("        \\  '. `-.           /");
+            System.out.println("         \\_:_)   `\"--.....-'");
+                break;
+                case 3:
+            System.out.println("            ___   .--. ");
+            System.out.println("      .--.-\"   \"-' .- |");
+            System.out.println("     / .-,`          .'");
+            System.out.println("     \\   `           \\");
+            System.out.println("      '.            ! \\");
+            System.out.println("        |     !  .--.  |");
+            System.out.println("        \\        '--'  /.____");
+            System.out.println("       /`-.     \\__,'.'      `\\");
+            System.out.println("    __/   \\`-.____.-' `\\      /");
+            System.out.println("    | `---`'-'._/-`     \\----'    _");
+            System.out.println("    |,-'`  /             |    _.-' `\\");
+            System.out.println("   .'     /              |--'`     / |");
+            System.out.println("  /      /\\              `         | |");
+            System.out.println("  |   .\\/  \\      .--. __          \\ |");
+            System.out.println("   '-'      '._       /  `\\         /");
+            System.out.println("               `\\    '     |------'`");
+            System.out.println("                 \\  |      |");
+            System.out.println("                  \\        /");
+            System.out.println("                   '._  _.'");
+            System.out.println("                      ``");
+                break;
+                case 4: 
+            System.out.println("         ,,'6''-,.");
+            System.out.println("        <====,.;;--.");
+            System.out.println("        _`---===. \"\"\"==__");
+            System.out.println("      //\"\"@@-\\===\\@@@@ \"\"\\\\");
+            System.out.println("     |( @@@  |===|  @@@  ||");
+            System.out.println("      \\\\ @@   |===|  @@  //");
+            System.out.println("        \\\\ @@ |===|@@@ //");
+            System.out.println("         \\\\  |===|  //");
+            System.out.println("___________\\\\|===| //_____,----\"\"\"\"\"\"\"\"\"\"-----,_");
+            System.out.println("  \"\"\"\"---,__`\\===`/ _________,---------,____    `,");
+            System.out.println("             |==||                           `\\   \\");
+            System.out.println("            |==| |                             )   |");
+            System.out.println("           |==| |       _____         ______,--'   '");
+            System.out.println("           |=|  `----\"\"\"     `\"\"\"\"\"\"\"\"         _,-'");
+            System.out.println("            `=\\     __,---\"\"\"-------------\"\"\"''");
+            System.out.println("                \"\"\"\"		");
+                break;
+                default:
+                        break;
+        }
+       }
+    /**
+     * Function name: draw - draws an animal that the user chooses.
+     * @param choice: (int)
+     * 
+     * Inside the function: 
+     *  • Based on the choice, draw:
+     *      1. a butterfly
+     *      2. elephant
+     *      3. bear
+     *      4. snake
+     */  
+
+     /*
+*/
+
+/* Scope
+public class Scope {
+    
+    // Global variables to store the rectangle's length and width (accessible within the whole class). BAD PRACTICE
+    // static double length = 2;
+    // static double width = 4;
+
+    public static void main(String[] args) {
+
+        double length = 2;
+        double width = 4;
+
+        calculateArea(length, width);
+        calculatePerimeter(length, width);
+
+    }
+
+    public static void calculateArea(double param1, double param2) {
+        // Local variable to store the area (accessible only within this function)
+        double area = param1 * param2;
+        System.out.println("Area of the rectangle: " + area);
+    }
+
+    public static void calculatePerimeter(double param1, double param2) {
+        // Local variable to store the perimeter (accessible only within this function)
+        double perimeter = 2 * (param1 + param2);
+        System.out.println("Perimeter of the rectangle: " + perimeter);
+    }
+}
+ */
+
+/* Built-in functions
+
+public class BuiltInFunctions {
+  
+public static void main(String[] args) {
+  
+/**
+ * Scenario 1
+ * 
+ * Find a built-in function that prints the message on the console.
+ * @param message (String)
+*/
+/*
+String message = "Hello, World!";
+// Write your code here
+System.out.println(message);
+
+/**
+ * Scenario 2
+ * 
+ * Find a built-in function that returns the length of a string.
+ * @return length (int)
+*/
+/*
+String example = "Java";
+// Write your code here
+int length = example.length();
+System.out.println(length);
+/**
+ * Scenario 3
+ * 
+ * Find a built-in function that converts a string to lowercase.
+ * @return lowerCase (String)
+*/
+/*
+String upperCase = "JAVA";
+// Write your code here
+String lowerCase = upperCase.toLowerCase();
+System.out.println(lowerCase);
+/**
+ * Scenario 4
+ * 
+ * Find a built-in function that checks if a string starts with a specified prefix.
+ * @param prefix (String)
+ * @return startsWithPrefix (boolean)
+*/
+/*
+String programming = "Java programming";
+// Write your code here
+boolean startsWithPrefix = programming.startsWith("Java");
+System.out.println(startsWithPrefix);
+
+
+/**
+ * Scenario 5
+ * 
+ * Find a built-in function that replaces all occurrences of a specified character in a string with another character.
+ * @param oldChar (char)
+ * @param newChar (char)
+ * @return replacedString (String)
+*/
+/*
+String original = "Java is fun!";
+// Write your code here
+String newString = original.replace("a", "o");
+System.out.println(newString);
+
+
+/**
+ * Scenario 6
+ * 
+ * Find a built-in function that calculates the square root of a number.
+ * @param number (double)
+ * @return squareRoot (double)
+*/
+/*
+double number = 9;
+// Write your code here
+double square = Math.sqrt(number);
+System.out.println(square);
+
+
+/**
+ * Scenario 7
+ * 
+ * Find a built-in function that calculates the power of a number.
+ * @param base (double)
+ * @param exponent (double)
+ * @return power (double)
+*/
+/*
+double base = 2;
+double exponent = 3;
+// Write your code here
+double power = Math.pow(base, exponent);
+System.out.println(power);
+
+
+/**
+ * Scenario 8
+ * 
+ * Find a built-in function that generates a random number between 0.0 (inclusive) and 1.0 (exclusive).
+ * @return randomNumber (double)
+*/
+// Write your code here
+/*
+double randomNumber = Math.random();
+System.out.println(randomNumber);
+
+
+
+/**
+ * Scenario 9
+ * 
+ * Find a built-in function that returns the larger of two numbers.
+ * @param number1 (int)
+ * @param number2 (int)
+ * @return maxNumber (int)
+*/
+/*
+int number1 = 5;
+int number2 = 10;
+// Write your code here
+int biggestNum = Math.max(number1, number2);
+System.out.println(biggestNum);
+
+}
+}
+*/
+
+/* Calculate area of square, rectangle, triangle, circle
+public class AreaCalculator {
+    public static void main(String[] args) {
+        System.out.println("Thank you for using the area calculator");
+        System.out.println("This calculator lets you get the area of: ");
+        System.out.println("1 - Square\n2 - Rectangle\n3 - Triangle\n4 - Circle\n");
+
+        
+        //Task 5 – Call area functions.
+
+        // double square = area of square with a side of 2.
+        // double rectangle = area of rectangle with a length of 1, and a width of 2. 
+        // double triangle = area of triangle with a base of 1, and a width of 2. 
+        // double circle = area of circle with a radius of 2. 
+
+        double square = areaSquare(2);
+        double rectangle = areaRectangle(1, 2);
+        double triangle = areaTriangle(1, 2);
+        double circle = areaCircle(2);
+        //Task 7 – Call a function that prints all the areas. 
+
+        printAreas(square, rectangle, triangle, circle);
+
+    }
+
+    //Task 1 - Write a function that calculates the area of a square. 
+    public static double areaSquare(double side) {
+        if(side < 0) {
+            System.out.println("Impossible");
+            System.exit(0);
+        } 
+            return Math.pow(side, 2);
+        
+    }
+
+  
+
+
+    /**
+     * Function name: areaSquare - returns the area of a square.
+     * @param side (double)
+     * @return the area (double)
+     * 
+     * Inside the function: 
+     *  1. If the side is negative, prints "Error: impossible" and terminates the java program.
+     *  2. Calculates the area of the square. A = side²
+     */
+    // public static double areaSquare(double side) {
+
+    //     return 0;
+    // }
+
+
+    //Task 2 - Write a function that calculates the area of a rectangle. 
+
+
+    /**
+     * Function name: areaRectangle – returns the area of a rectangle.
+     * @param length (double).
+     * @param width  (double).
+     * @return the area (double)
+     * 
+     * Inside the function: 
+     *  1. If the length OR width is negative, prints "Error: impossible" and terminates the program.
+     *  2. Calculates the area of the rectangle. A = length * width
+    public static double areaRectangle(double length, double width) {
+      if (length < 0 || width < 0) {
+        System.out.println("Impossible");
+        System.exit(0);
+      }
+      return length * width;
+    } 
+    
+    //Task 3 - Write a function that calculates the area of a triangle. 
+    
+    /**
+     * Function name: areaTriangle – it returns the area of a triangle.
+     * @param base: (double).
+     * @param height: (double).
+     * @return the area (double)
+     * 
+     * Inside the function: 
+     *  1. If the base OR height is negative, prints "Error: impossible" and terminates the program.
+     *  2. Calculates the area of the triangle. A = (base * height)/2
+    */ 
+   /*
+   public static double areaTriangle(double base, double height) {
+    if (base < 0 || height < 0) {
+      System.out.println("Impossible");
+      System.exit(0);
+    } 
+    return (base * height) / 2;
+  }
+  
+  //Task 4 - Write a function that calculates the area of circle. 
+  
+  
+  /**
+   * Function name: areaCircle – it returns the area of a circle.
+   * @param radius (double).
+   * @return area (double)
+   * 
+   * Inside the function: 
+   *  1. If the radius is negative, prints "Error: impossible" and terminates the program.
+   *  2. Calculates the area of the circle. 
+  */ 
+ /*
+ public static double areaCircle(double radius) {
+  if (radius < 0) {
+    System.out.println("Impossible");
+    System.exit(0);
+  }
+  return Math.PI * Math.pow(radius, 2);
+}
+
+
+
+//Task 6: Write a function that prints every area.
+
+
+/**
+ * Function name: printAreas – it prints four areas
+ * @param square – square area (double)
+ * @param rectangle – rectangle area (double)
+ * @param triangle – triangle area (double)
+ * @param circle – circle area (double)
+ * 
+ * Inside the function:
+ *  1. print: ("Square area: <square area>")
+ *  2. print: ("Rectangle area: <rectangle area>")
+ *  3. print: ("Triangle area: <triangle area>")
+ *  4. print: ("Circle area: <circle area>")
+ * 
+*/
+  /**
+   * 
+  public static void printAreas(double square, double rectangle, double triangle, double circle) {
+    System.out.println("Square area: " + square);
+    System.out.println("Rectangle area: " + rectangle);
+    System.out.println("Triangle area: " + triangle);
+    System.out.println("Circle area: " + circle);
+  }
+  
+}
+*/
+
+/* Dice game with functions
+
+import java.util.Scanner;
+
+public class DiceJack {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    int roll1 = rollDice();
+    int roll2 = rollDice();
+    int roll3 = rollDice();
+
+    System.out.print("Enter three numbers between 1 and 6: ");
+    int num1 = scanner.nextInt();
+    int num2 = scanner.nextInt();
+    int num3 = scanner.nextInt();
+
+    if (isLessThan1(num1, num2, num3) || isGreaterThan6(num1, num2, num3)) {
+      System.out.println("You entered invalid number(s)");
+      System.exit(0);
+    }
+
+    int sumOfNumbers = num1 + num2 + num3;
+    int sumOfDiceRolls = roll1 + roll2 + roll3;
+      
+    System.out.println("Your sum is " + sumOfNumbers + " compared to the dice rolls of " + sumOfDiceRolls);
+
+    if(userWon(sumOfNumbers, sumOfDiceRolls)) {
+      System.out.println("Congratulations! You win!");
+    } else {
+      System.out.println("Better luck next time");
+    }
+
+    scanner.close();
+  }
+
+    public static boolean isLessThan1 (int num1, int num2, int num3) {
+      return (num1 < 1 || num2 < 1 || num3 < 1);
+
+    }
+
+    public static boolean isGreaterThan6 (int num1, int num2, int num3) {
+      return (num1 > 6 || num2 > 6 || num3 > 6);
+    }
+
+    public static boolean userWon(int sumNumbers, int sumDiceRolls) {
+      return (sumNumbers > sumDiceRolls && (sumNumbers - sumDiceRolls) < 5);
+    }
+
+    public static int rollDice() {
+      double randomNumber = Math.random() * 6 + 1;
+      return (int)randomNumber; // create an integer to cut off the decimal
+    }
+ 
+}
+*/
+
+/* Rock paper scissors game
+
+import java.util.Scanner;
+
+public class RockPaperScissors {
+    public static void main(String[] args) {
+        
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Let's play Rock Paper Scissors.");
+        System.out.println("When I say 'shoot', Choose: rock, paper, or scissors.\n");
+        System.out.println("Are you ready? Write 'yes' if you are.");
+
+    //Task 1: See if the user wants to play. 
+        String response = scan.nextLine();
+        if(response.equals("yes") || response.equals("Yes")) {
+            System.out.println("Great!");
+            System.out.println("Rock, paper, scissors! 1, 2, 3!");
+            String userChoice = scan.nextLine();
+                
+            String compChoice = computerChoice();
+            System.out.println("You chose " + userChoice);
+            System.out.println("The computer chose " + compChoice);
+
+            String finalResult = result(userChoice, compChoice);
+            printResult(userChoice, compChoice, finalResult);
+            
+        } else {
+            System.out.println("Oh no, try again another time");
+        }
+
+        scan.close();
+    }
+
+
+public static String computerChoice() {
+    int randomNumber = (int)Math.random() * 3;
+    if(randomNumber == 0) {
+        return "Rock";
+    } else if (randomNumber == 1) {
+        return "Paper";
+    } else if (randomNumber == 2) {
+        return "Scissors";
+    } else {
+        return "That's not an option!";
+    }
+}
+    
+
+    public static String result(String userChoice, String compChoice) {
+        
+        if (userChoice.equals("Rock") && compChoice.equals("Scissors") || (userChoice.equals("Paper") && compChoice.equals("Rock")) || (userChoice.equals("Scissors") && compChoice.equals("Paper"))) {   
+            return "You Win!!";
+        } else if (userChoice.equals("Scissors") && compChoice.equals("Rock") || (userChoice.equals("Rock") && compChoice.equals("Paper")) || (userChoice.equals("Paper") && compChoice.equals("Scissors"))) {
+            return "You Lose!!";
+        } else if (userChoice.equals(compChoice)) {
+            return "It's a tie!";
+        } else {
+            return "Error";
+        }
+    }
+     //Task 5  – Write a function that prints your choice, the computer's, and the result.
+
+     public static void printResult(String userChoice, String compChoice, String result) {
+        System.out.println("You chose: " + userChoice);
+        System.out.println("The computer chose: " + compChoice);
+        System.out.println(result);
+     }
+   
+
+}
+*/
+
+// YOUTUBE CONTENT
+// ABSTRACT
+/*
+ Abstract class- define variables that subclasses inherit
+               - templates for subclasses
+ Abstract methods- not yet implimented, designed to be overridden
+                 - declares behaviour, without implementing
+                 - eg. dogs all bark, but the dog objects decide how to bark
+                 - must be inside abstract class, must be overridden in subclasses
+*/
+
+/*
+abstract class Dog {
+  
+String breed;
+
+public void bark() {
+  System.out.println("Woof");
+}
+
+public abstract void eat();
+}
+
+class Collie extends Dog {
+  
+public void eat() {
+  System.out.println("Scoff Scoff");
+}
+}
+
+public class Abstract {
+  
+public static void main(String[] args) {
+  
+*/
+/*Dog Oskar = new Dog() { // abstract classes cannot be used like normal classes
+Oskar.bark()
+};*/
+
+/*
+Collie Beck = new Collie();
+Beck.bark();
+Beck.eat();
+
+
+}
+
+}
+*/
+
+// INTERFACE
+// Uses the IMPLEMENTS keyword
+/*
+Defines the capabilities of subclasses
+What a class CAN do (skills)
+NO constructors/ instance variables
+*/
+/*
+interface DogInterface {
+  
+void bark();
+void eat();
+
+}
+*/
+
+/* Eg.2: 
+
+interface Speakable {
+  void speak();
+}
+
+class Robot inplements Speakable {
+  public void speak() {
+    System.out.println("Beep boop");
+  }
+}
+
+*/
+
+// ABSTRACT
+/*
+ Abstract class- define variables that subclasses inherit
+               - templates for subclasses
+ Abstract methods- not yet implimented, designed to be overridden
+                 - declares behaviour, without implementing
+                 - eg. dogs all bark, but the dog objects decide how to bark
+                 - must be inside abstract class, must be overridden in subclasses
+*/
+
+/*
+abstract class Dog {
+  
+String breed;
+
+public void bark() {
+  System.out.println("Woof");
+}
+
+public abstract void eat();
+}
+
+class Collie extends Dog {
+  
+public void eat() {
+  System.out.println("Scoff Scoff");
+}
+}
+
+public class Abstract {
+  
+public static void main(String[] args) {
+  
+*/
+/*Dog Oskar = new Dog() { // abstract classes cannot be used like normal classes
+Oskar.bark()
+};*/
+
+/*
+Collie Beck = new Collie();
+Beck.bark();
+Beck.eat();
+
+
+}
+
+}
+*/
+
+// INTERFACE
+// Uses the IMPLEMENTS keyword
+/*
+Defines the capabilities of subclasses
+What a class CAN do (skills)
+NO constructors/ instance variables
+*/
+/*
+interface DogInterface {
+  
+void bark();
+void eat();
+
+}
+*/
+
+/* Eg.2: 
+
+interface Speakable {
+  void speak();
+}
+
+class Robot inplements Speakable {
+  public void speak() {
+    System.out.println("Beep boop");
+  }
+}
+
+*/
+
+// POLYMORPHISM
+
+/*
+Polymorphism- When a single method call acts differently depending on the OBJECT that receives it
+            - SAME method, DIFFERENT behaviour
+            - Requires the EXTENDS keyword
+            - Method call in the object takes PRECIDENCE over default class
+*/
+
+/*
+class Bird {
+  
+public void sing() {
+  System.out.println("cheep cheep");
+}
+}
+
+class Robin extends Bird {
+  public void sing() {
+    System.out.println("chirrup chirrup"); // prioritises method INSIDE class
+  }
+}
+
+class Blackbird extends Bird {
+  // will be the default cheep cheep
+}
+
+class Crow extends Bird {
+  public void sing() {
+    System.out.println("caw caw"); // choses this instead of default
+  }
+}
+
+public class Polymorphism {
+  
+public static void main(String[] args) {
+  Bird b = new Bird();
+  b.sing();
+}
+
+}
+*/
+
+
+// POLYMORPHISM
+
+/*
+Polymorphism- When a single method call acts differently depending on the OBJECT that receives it
+            - SAME method, DIFFERENT behaviour
+            - Requires the EXTENDS keyword
+            - Method call in the object takes PRECIDENCE over default class
+*/
+
+/*
+class Bird {
+  
+public void sing() {
+  System.out.println("cheep cheep");
+}
+}
+
+class Robin extends Bird {
+  public void sing() {
+    System.out.println("chirrup chirrup"); // prioritises method INSIDE class
+  }
+}
+
+class Blackbird extends Bird {
+  // will be the default cheep cheep
+}
+
+class Crow extends Bird {
+  public void sing() {
+    System.out.println("caw caw"); // choses this instead of default
+  }
+}
+
+public class Polymorphism {
+  
+public static void main(String[] args) {
+  Bird b = new Bird();
+  b.sing();
+}
+
+}
+*/
+

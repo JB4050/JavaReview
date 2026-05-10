@@ -2165,8 +2165,63 @@ private static int printANumber() {
 // The RESULT is '5'- the finally return OVERRIDES the others
 */
 
+// Finding out exception name- must input EXACT problem or it can't be caught
+/*
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
-// SUPER (parent)
+public class ExceptionHandling {
+  public static void main(String[] args) {
+*/
+   /*
+   Scanner scanner = new Scanner(System.in);
+   
+   System.out.println("Enter a whole number to divide: ");
+   int x = scanner.nextInt();
+   
+   System.out.println("Enter a whole number to divide by: ");
+   int y = scanner.nextInt();
+   
+   int z = x/y;
+   
+   System.out.println("Result: " + z);
+   // Divide by 0 results in "ArithmeticException"
+   // Use TRY to stop this issue resulting in crash
+   */
+  /*
+  Scanner scanner = new Scanner(System.in);
+  
+  try {
+    
+  System.out.println("Enter a whole number to divide: ");
+  int x = scanner.nextInt();
+  
+  System.out.println("Enter a whole number to divide by: ");
+  int y = scanner.nextInt();
+  
+  int z = x/y;
+  
+  System.out.println("Result: " + z);
+}
+catch(ArithmeticException e) {
+  System.out.println("You can't divide by 0!");
+}
+catch(InputMismatchException e) {
+  System.out.println("Please enter a number");
+}
+catch(Exception e) {
+  System.out.println("Something went wrong");
+}
+finally {
+  System.out.println("This will always print"); // Always runs the finally block whether there is exception or not
+  scanner.close(); // Good to put the scanner's closer here
+}
+}
+}
+*/
+////// END OF EXCEPTION HANDLING
+
+////// SUPER (parent)
 // super- refers to the parent class (subclass <- superclass)
 // Used in constructors and method overriding
 // Calls the parent constuctor to initialize attributes
@@ -2239,4 +2294,4 @@ void showSalary() {
 }
 }
 */
-///// END of SUPER
+///// END OF SUPER

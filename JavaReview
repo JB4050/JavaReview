@@ -2069,7 +2069,98 @@ public static void main(String[] args) {
   Bird b = new Bird();
   b.sing();
 }
+}
+*/
+
+
+// EXCEPTION HANDLING
+// Exceptions will cause code to throw an error and stop if they are found
+// We can manually set an exception to prevent the code from stopping and provide custom error info
+// We write user exceptions with try/catch block
+// If exception is NOT thrown, the catch is NOT executed
+
+/*
+public class ExceptionHandling {
+  public static void main(String[] args) {
+    
+  
+  try {
+    int myInt = Integer.parseInt("trousers");
+    System.out.println("Run after parseInt"); // If there is an exception above, this won't run!
+  } 
+  catch (NumberFormatException nfe) { // Only exceptions of this type will be caught
+  System.out.println("You can't make an int from that!");
+}
+// This will not cause the code to stop 
+// If exception type is simply 'Exception', any exception will cause the catch to run
+}
+}
+*/
+
+
+/*
+// You can also put a METHOD in TRY
+
+// Eg.
+
+class ExceptionHandling {
+  
+public static void main(String[] agrs) {
+  
+try {
+  getInt(); // The method is called here
+}
+catch (Exception e) {
+  System.out.println("You can't do that");
+}
+
+private static void getInt() {
+  int myInt = Integer.parseInt("Trousers");
+}
+
+}
 
 }
 */
 
+/* 
+// Using FINALLY block 
+// You can catch DIFFERENT exceptions in the same MULTICATCH statement
+// Eg.
+
+class ExceptionHandling {
+  public static void main(String[] args) {
+    
+  try {
+    int myInt = Integer.parseInt("1"); 
+  } 
+  catch (NumberFormatException | NullPointerException e) { // the 'e' is the variable that holds the thrown exception 
+  System.out.println("That's not allowed!"); // the 'e' is effectively FINAL- cannot be reassigned
+}
+// FINALLY block will execute whether there is an EXCEPTION OR NOT
+finally {
+  System.out.println("This is the finally block");
+}
+System.out.println("The try/catch ends here");
+}
+}
+*/
+
+
+/*
+// You can put a RETURN statement in the try/catch block
+
+private static int printANumber() {
+  try {
+    return 3;
+  }
+  catch (Exception e) {
+    return 4;
+  }
+  finally {
+    return 5;
+  }
+}
+
+// The RESULT is '5'- the finally return OVERRIDES the others
+*/

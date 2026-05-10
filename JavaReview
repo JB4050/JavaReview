@@ -2164,3 +2164,79 @@ private static int printANumber() {
 
 // The RESULT is '5'- the finally return OVERRIDES the others
 */
+
+
+// SUPER (parent)
+// super- refers to the parent class (subclass <- superclass)
+// Used in constructors and method overriding
+// Calls the parent constuctor to initialize attributes
+
+public class Super {
+  public static void main(String[] args) {
+    
+    Person person = new Person("Mario", "Theplumber"); 
+    Student student = new Student("Harry", "Potter", 'C');
+    Employee employee = new Employee("Rubeus", "Hagrid", 1005);
+
+    person.showName();
+    student.showName();
+    student.showGrade();
+    employee.showSalary();
+  }
+}
+
+
+/*
+////// IN ANOTHER FILE
+
+public class Person { // This is the parent class
+
+String first; // These attributes are INHERITED 
+String last;
+
+// Constructor for new person object
+Person(String first, String last) { 
+  this.first = first;
+  this.last = last;
+}
+
+// Method to show the person's name
+void showName() { 
+  System.out.println(this.first + " " + this.last); // INHERITED from Person class
+}
+}
+*/
+
+/*
+////// IN ANOTHER FILE
+
+public class Student extends Person { // INHERITING from 
+
+char grade;
+
+Student(String first, String last, char grade) { // Student constructor
+super(first, last); // Refers to PARENT- in this case PARENT
+this.grade = grade;
+}
+}
+*/
+
+
+/*
+////// IN ANOTHER FILE
+
+public class Employee extends Person {
+  
+int salary;
+
+Employee(String first, String last, int salary) {
+  super(first, last); // INHERITED FROM PERSON
+  this.salary = salary;
+}
+
+void showSalary() {
+  System.out.println(this.first + "'s salary is " + salary + " galleons per year");
+}
+}
+*/
+///// END of SUPER

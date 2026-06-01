@@ -2295,3 +2295,155 @@ void showSalary() {
 }
 */
 ///// END OF SUPER
+
+
+
+
+HTML
+<!doctype html>
+<html>
+  <link rel="stylesheet" href="styles.css" />
+  <body class="bg">
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+
+      <span></span>
+    </div>
+
+    <nav class="mobile-menu" id="mobileMenu">
+      <a href="#">Logout</a>
+      <a href="#">Help</a>
+    </nav>
+    <script src="main.js"></script>
+  </body>
+</html>
+
+
+CSS
+
+.hamburger {
+  width: 30px;
+  padding: 10px;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+
+  background: #222;
+  border: 2px solid #444;
+  border-radius: 10px;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.hamburger:hover {
+  background: #333;
+  border-color: #666;
+  transform: scale(1.05);
+}
+
+.hamburger span {
+  height: 4px;
+  background: #fff;
+  border-radius: 4px;
+  transition: 0.4s ease;
+}
+
+.mobile-menu {
+  max-width: 220px;
+  width: 80%;
+  max-height: 0;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  background: rgba(20, 20, 20, 0.9);
+
+  border-radius: 10px;
+
+  padding: 0 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+
+  transition:
+    max-height 0.4s ease,
+    padding 0.3s ease;
+}
+
+.mobile-menu.show {
+  max-height: 300px;
+  padding: 15px;
+}
+
+.mobile-menu a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 18px;
+
+  background: #333;
+  border: 1px solid #555;
+  border-radius: 6px;
+
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.mobile-menu a:hover {
+  background: #444;
+  border-color: #777;
+  color: #ffcc00;
+  transform: translateX(5px);
+}
+
+.mobile-menu a:not(:last-child)::after {
+  content: "";
+  display: none;
+  height: 1px;
+  background: #555;
+  margin-top: 10px;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+
+JavaScript
+const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobileMenu");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  mobileMenu.classList.toggle("show");
+});
+
+document.addEventListener("click", (e) => {
+  const isClickInsideMenu = mobileMenu.contains(e.target);
+  const isClickOnHamburger = hamburger.contains(e.target);
+
+  if (!isClickInsideMenu && !isClickOnHamburger) {
+    mobileMenu.classList.remove("show");
+    hamburger.classList.remove("active");
+  }
+});
+
